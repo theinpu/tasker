@@ -1,0 +1,25 @@
+{
+    "name": "bincode/tasker",
+    "description": "project tasker",
+    "authors": [
+        {
+            "name": "inpu",
+            "email": "theinpu@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "2.4.0",
+        "aascms/mongo": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "bincode\\tasker": "."
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://composer.bincode.info"
+        }
+    ]
+}
