@@ -5,4 +5,8 @@
  * Time: 4:05
  */
 
-echo "hello world";
+require_once '../vendor/autoload.php';
+
+$app = new \bincode\tasker\Application();
+
+$app->run();
