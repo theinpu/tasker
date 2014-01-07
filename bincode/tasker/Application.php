@@ -25,7 +25,8 @@ class Application
         $this->slim->group('/github', function () use ($app) {
             $app->getSlim()->post('/hook', function() use ($app) {
                 $log = fopen("/tmp/hook.log", "a+");
-                fwrite($log, print_r($_POST, true)."\r\n");
+                $hookInfo = $app->getSlim()->request()->post("payload");
+                fwrite($log, print_r($hookInfo, true)."\r\n");
                 fclose($log);
             });
         });
